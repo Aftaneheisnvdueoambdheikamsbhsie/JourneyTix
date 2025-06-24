@@ -1,0 +1,98 @@
+/* === Background & Layout === */
+.booking-section {
+  background: linear-gradient(to right, #e8f5e9, #ffffff);
+  padding: 60px 20px;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* === Heading Animasi === */
+#judulBooking {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1b5e20;
+  animation: slideInDown 0.7s ease-out;
+  margin-bottom: 10px;
+}
+
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* === Card Form === */
+form.shadow-lg {
+  background: #ffffff;
+  padding: 30px;
+  border-left: 8px solid #4caf50;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease-in-out;
+}
+
+/* === Label & Input === */
+label.form-label {
+  font-weight: 600;
+  color: #2e7d32;
+  margin-bottom: 5px;
+}
+
+input.form-control,
+select.form-select,
+textarea.form-control {
+  border-radius: 10px;
+  border: 1px solid #c8e6c9;
+  padding: 12px 18px;
+  background: #f9fbe7;
+  transition: all 0.2s ease;
+}
+
+input.form-control:focus,
+select.form-select:focus,
+textarea.form-control:focus {
+  border-color: #66bb6a;
+  box-shadow: 0 0 0 0.15rem rgba(76, 175, 80, 0.25);
+  background: #ffffff;
+}
+
+/* === Tombol === */
+button.btn-success {
+  padding: 14px 35px;
+  border-radius: 14px;
+  background: linear-gradient(120deg, #388e3c, #66bb6a);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+button.btn-success:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(120deg, #2e7d32, #43a047);
+  box-shadow: 0 6px 16px rgba(56, 142, 60, 0.5);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  #judulBooking {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  form.shadow-lg {
+    padding: 20px;
+  }
+
+  .btn-success {
+    width: 100%;
+    font-size: 1rem;
+  }
+}

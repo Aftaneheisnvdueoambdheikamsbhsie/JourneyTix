@@ -1,0 +1,96 @@
+/* === Background & Layout === */
+.booking-section {
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  padding: 60px 20px;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* === Judul === */
+#judulBooking {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #01579b;
+  animation: fadeSlideDown 0.8s ease;
+}
+
+@keyframes fadeSlideDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* === Form Container === */
+form.shadow-lg {
+  background: #ffffff;
+  padding: 30px;
+  border-left: 8px solid #0288d1;
+  border-radius: 18px;
+  box-shadow: 0 12px 24px rgba(2, 136, 209, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+/* === Label & Input === */
+label.form-label {
+  font-weight: 600;
+  color: #0277bd;
+}
+
+input.form-control,
+select.form-select,
+textarea.form-control {
+  border-radius: 12px;
+  border: 1px solid #b3e5fc;
+  padding: 12px 16px;
+  background: #e1f5fe;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #0288d1;
+  background: #ffffff;
+  box-shadow: 0 0 0 0.15rem rgba(2, 136, 209, 0.25);
+}
+
+/* === Tombol Submit === */
+button.btn-primary {
+  padding: 14px 32px;
+  border-radius: 14px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background: linear-gradient(to right, #0277bd, #4fc3f7);
+  color: #fff;
+  border: none;
+  box-shadow: 0 6px 12px rgba(2, 136, 209, 0.3);
+  transition: 0.3s ease;
+}
+
+button.btn-primary:hover {
+  background: linear-gradient(to right, #01579b, #03a9f4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(2, 136, 209, 0.4);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  #judulBooking {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  form.shadow-lg {
+    padding: 20px;
+  }
+
+  button.btn-primary {
+    width: 100%;
+    font-size: 1rem;
+  }
+}

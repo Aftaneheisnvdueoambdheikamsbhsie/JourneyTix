@@ -1,0 +1,445 @@
+/* style.css */
+:root {
+  --primary: #0047AB;        /* Biru tua khas P.O JAYA */
+  --accent: #FFD700;         /* Kuning emas */
+  --light: #f4faff;
+  --dark: #001d3d;
+  --gray: #e0e0e0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.navbar {
+  background-color: var(--primary) !important;
+}
+
+.navbar-brand,
+.nav-link {
+  color: white !important;
+}
+
+.btn-warning {
+  background-color: var(--accent);
+  border: none;
+  color: var(--dark);
+}
+
+.btn-warning:hover {
+  background-color: #e6c200;
+}
+
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+
+    @media (max-width: 768px) {
+      .navbar .dropdown,
+      .navbar .d-lg-flex {
+        display: none !important;
+      }
+    }
+	
+/* Footer Color Uplift (putih kekuningan) */
+footer {
+  background-color: #fffdf2; /* warna putih pastel kekuningan */
+  color: #333;
+  padding: 2rem 0;
+  border-top: 1px solid #ddd;
+}
+
+footer a {
+  color: #0047AB; /* Tetap gunakan biru identitas untuk tautan */
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.marquee-info {
+  background-color: var(--accent);
+  color: #000;
+}
+
+.hero {
+  background: url('../img/trans1.jpg') center/cover no-repeat;
+  height: 33vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0,0,0,0.5);
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+.pointer {
+  cursor: pointer;
+}
+
+.card textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,.25);
+}
+.fit-image {
+  width: 100%;
+  max-width: 80px; /* kamu bisa ubah sesuai kebutuhan */
+  height: auto;
+  object-fit: contain; /* supaya tidak terpotong */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel-img {
+  height: 400px; /* Kamu bisa sesuaikan, misal 500px */
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Responsive Layout Enhancements */
+
+/* Layout container defaults */
+.container {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+/* Responsive Hero Section */
+.hero {
+  height: 33vh;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+    background-position: center top;
+  }
+
+  .hero-overlay {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  .navbar-brand,
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .btn-warning {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 480px) {
+  .hero {
+    height: 40vh;
+    background-position: top;
+  }
+
+  .hero-overlay {
+    font-size: 0.85rem;
+  }
+
+  .navbar-toggler {
+    border-color: white;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+  }
+
+  .btn-warning {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  footer {
+    padding: 1rem 0;
+  }
+}
+    body {
+    font-family: 'Poppins', sans-serif;
+  }
+    .logo {
+      height: 45px;
+      width: 45px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .navbar .dropdown-menu {
+      border-radius: 8px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      margin-top: 10px;
+    }
+
+    .navbar .dropdown-item {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+
+    .navbar-icons img {
+      width: 28px;
+      height: 28px;
+      margin-left: auto;
+      filter: brightness(100);
+      cursor: pointer;
+    }
+	.nav-link-animate {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 5px;
+  transition: color 0.3s;
+}
+
+.nav-link-animate::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: gold; /* atau var(--primary) */
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link-animate:hover::after {
+  width: 100%;
+}
+
+.nav-link-animate.active::after {
+  width: 100%;
+}
+
+.modal-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content-custom {
+  background: white;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 600px;
+  max-height: 80%;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.modal-header-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-header {
+  display: flex;
+  gap: 20px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-btn.active {
+  border-bottom: 3px solid #000;
+}
+
+.lang-list {
+  list-style: none;
+  padding: 0;
+}
+
+.lang-list li {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.globe-icon {
+  width: 32px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.globe-icon:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+    /* Sidebar */
+    .sidebar-overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0,0,0,0.4);
+      display: none;
+      z-index: 1400;
+    }
+
+    .sidebar-overlay.active {
+      display: block;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 250px;
+      height: 100%;
+      background-color: white;
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+      transition: right 0.3s ease;
+      padding: 1.5rem;
+      z-index: 1500;
+    }
+
+    .sidebar.active {
+      right: 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 2rem;
+    }
+
+    .sidebar ul li {
+      margin: 20px 0;
+    }
+
+    .sidebar ul li a {
+      color: var(--primary);
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .no-scroll {
+      overflow: hidden;
+    }
+/* Atur tinggi carousel gambar agar proporsional */
+/* 800px tinggi tapi tetap lebar penuh */
+.container-carousel {
+  position: relative;
+  width: 100%;
+  max-height: 800px;
+  overflow: hidden;
+}
+
+/* Gambar carousel */
+.carousel-img {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Pastikan carousel berada dalam konteks relative (agar tombol & indikator nempel ke area gambar, bukan layar) */
+.container-carousel .carousel {
+  position: relative;
+}
+
+/* Tombol prev/next fix di tengah gambar */
+.container-carousel .carousel-control-prev,
+.container-carousel .carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  z-index: 10;
+  backdrop-filter: blur(8px); /* efek buram */
+  background-color: rgba(255, 255, 255, 0.4); /* putih semi transparan */
+  border: 1px solid rgba(255,255,255,0.5); /* opsional: biar ada outline samar */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* opsional: sedikit bayangan */
+  transition: background-color 0.3s ease;
+}
+
+/* Ikon panah */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 100% 100%;
+  filter: invert(1);
+  width: 20px;
+  height: 20px;
+
+}
+
+.container-carousel .carousel-control-prev:hover,
+.container-carousel .carousel-control-next:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Indikator tepat di tengah bawah gambar */
+.container-carousel .carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
+  display: flex;
+  gap: 8px;
+}
+
+.container-carousel .carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  border: none;
+}
+
+.container-carousel .carousel-indicators .active {
+  background-color: var(--accent);
+}
