@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JourneyTix - Pemesanan Tiket</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Selamat Datang di JourneyTix</h1>
+    <p>Platform Pemesanan Tiket Mudah dan Cepat</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Pesan Tiket Anda Sekarang</h2>
+      <form action="https://your-backend-server.com/pages/proses_pemesanan.php" method="post">
+        <label for="nama">Nama Lengkap:</label><br />
+        <input type="text" id="nama" name="nama" required /><br /><br />
+
+        <label for="jenis">Jenis Transportasi:</label><br />
+        <select name="jenis" id="jenis">
+          <option value="bus">Bus</option>
+          <option value="kereta">Kereta</option>
+          <option value="kapal">Kapal</option>
+          <option value="pesawat">Pesawat</option>
+        </select><br /><br />
+
+        <label for="tanggal">Tanggal Keberangkatan:</label><br />
+        <input type="date" id="tanggal" name="tanggal" required /><br /><br />
+
+        <button type="submit">Pesan Tiket</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 JourneyTix. All rights reserved.</p>
+  </footer>
+</body>
+</html>
